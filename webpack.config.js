@@ -4,6 +4,15 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
+  },
+  module: {
+    rules: [
+      {
+        use: 'babel-loader',
+        // for vue files, test: /\.vue$/
+        test: /\.js$/
+      }
+    ]
   }
 }
 
